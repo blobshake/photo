@@ -5,10 +5,9 @@
   <%= @painting.name %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%= image_tag @painting.image_url(:thumb) if @painting.image? %>
-</p>
+
+  <b>User: <%= @painting.user_id %></b>
+ <p> <%= image_tag @painting.image_url(:thumb) if @painting.image? %> </p>
 
 
 <%= link_to 'Edit', edit_painting_path(@painting) %> |

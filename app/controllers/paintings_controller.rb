@@ -42,7 +42,22 @@ class PaintingsController < ApplicationController
   # POST /paintings
   # POST /paintings.json
   def create
-    @painting = Painting.new(params[:painting])
+      #code to set the painting user id to current user id
+     
+      #@painting = Painting.new(params[:user_id => current_user_id])
+      #@painting = Painting.new(params[:@user_id => @current_user_id])
+      #@painting = Painting.new(params[:@user_id => @user_id])
+      #@painting = Painting.new(params[:@user_id => session[:user_id]])
+      #@painting = Painting.new(params[:@user_id => session.user_id])
+      # @painting = Painting.new(params[:@user_id => @current_user[session[:user_id]]])
+      #@painting = Painting.new(params[:@user_id => @current_user_id])
+      #@user = User.find(session[:user_id])
+      #@painting = Painting.new(params[:@user_id => current_user.id])
+      #@painting = Painting.new(params[:@user_id => current_user.id])
+      # this code works but not the right way @painting = Painting.new(:@user_id => current_user.id)
+      #user.paintings.create(user_id = current_user.id)
+      @painting = current_user.paintings.build(params[:painting])
+      #@painting = Painting.new(params[:painting])
 
     respond_to do |format|
       if @painting.save
