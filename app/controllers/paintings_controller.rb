@@ -1,5 +1,11 @@
 class PaintingsController < ApplicationController
-    before_filter :authorize, only: [:edit, :update, :new, :save, :destroy]
+    
+    before_filter :admin
+    before_filter :authorized_user, only: [:destroy, :update, :edit]
+    
+    before_filter :authorize, only: [:index, :new, :save]
+    
+    
     
   # GET /paintings
   # GET /paintings.json
@@ -11,6 +17,15 @@ class PaintingsController < ApplicationController
       format.json { render json: @paintings }
     end
   end
+    
+    def index_admin
+        @paintings = Painting.all
+        
+        respond_to do |format|
+            format.html # index_admin.html.erb
+            format.json { render json: @paintings }
+        end
+    end
 
   # GET /paintings/1
   # GET /paintings/1.json
@@ -44,15 +59,7 @@ class PaintingsController < ApplicationController
   def create
       #code to set the painting user id to current user id
      
-      #@painting = Painting.new(params[:user_id => current_user_id])
-      #@painting = Painting.new(params[:@user_id => @current_user_id])
-      #@painting = Painting.new(params[:@user_id => @user_id])
-      #@painting = Painting.new(params[:@user_id => session[:user_id]])
-      #@painting = Painting.new(params[:@user_id => session.user_id])
-      # @painting = Painting.new(params[:@user_id => @current_user[session[:user_id]]])
-      #@painting = Painting.new(params[:@user_id => @current_user_id])
-      #@user = User.find(session[:user_id])
-      #@painting = Painting.new(params[:@user_id => current_user.id])
+    
       #@painting = Painting.new(params[:@user_id => current_user.id])
       # this code works but not the right way @painting = Painting.new(:@user_id => current_user.id)
       #user.paintings.create(user_id = current_user.id)
@@ -97,4 +104,15 @@ class PaintingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+    
+    private
+    
+    def authorized_user
+        @painting = Painting.find(params[:id])
+        #redirect_to root_path unless current_user?(@painting.user)
+        #redirect_to root_path unless current_user.id(@painting.user)
+        redirect_to root_path, alert: "Not authorized"  unless current_user.id = @painting.user
+        #current_user.id = @painting.user
+    end
+    
 end

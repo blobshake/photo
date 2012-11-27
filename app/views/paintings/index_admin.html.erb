@@ -1,0 +1,32 @@
+<h1>Listing paintings</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>User</th>
+    <th>User ID</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @paintings.each do |painting| %>
+  <tr>
+    <td><%= painting.name %></td>
+    <td><%= painting.user_id %></td>
+    <td><%= link_to 'Show', painting %></td>
+    
+    
+<%# if current_user.id = painting.user %>
+	<td><%= link_to 'Edit', edit_painting_path(painting) %></td>
+	<td><%= link_to 'Destroy', painting, method: :delete  %></td>
+    <%#end%>
+	
+  </tr>
+<%end%>
+	
+</table>
+
+
+<br />
+
+<%= link_to 'New Painting', new_painting_path %>

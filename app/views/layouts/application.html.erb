@@ -10,6 +10,8 @@
 	<% flash.each do |k, v| %>
 	      <div class="<%= k %>"><%= v %></div>
 	  <% end %>
+	
+
 		
 	<% if current_user %>
 	  Logged in as <%= current_user.email %> and <%= current_user.id %>
