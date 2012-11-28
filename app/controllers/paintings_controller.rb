@@ -1,22 +1,16 @@
 class PaintingsController < ApplicationController
     
-    before_filter :admin
     before_filter :authorized_user, only: [:destroy, :update, :edit]
     
     before_filter :authorize, only: [:index, :new, :save]
     
     
     
-  # GET /paintings
-  # GET /paintings.json
-  def index
-    @paintings = Painting.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @paintings }
-    end
-  end
+ 
+    
+    def index
+    @paintings = Painting.search(params[:search])
+        end
     
     def index_admin
         @paintings = Painting.all

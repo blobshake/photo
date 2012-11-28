@@ -1,3 +1,11 @@
+<%= form_tag paintings_path, :method => 'get', :id => "paintings_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+ 
+<% end %>
+
 <% @paintings.each do |painting| %>
 
 <%= link_to painting_path(painting) do %>	

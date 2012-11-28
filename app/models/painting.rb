@@ -12,4 +12,12 @@ class Painting < ActiveRecord::Base
     
     # set current_user[:user_id] = @painting[:user_id]
     
+    def self.search(search)
+    if search
+    find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+    else
+    find(:all)
+end
+end
+    
 end

@@ -15,10 +15,20 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :password_digest %><br />
-    <%= f.text_field :password_digest %>
+  <p>
+  <b>Password:</b>
+  <%= @user.password %>
+</p>
+
+<div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
   </div>
+
+<p>
+  <b>User ID:</b>
+  <%= @user.id %>
+</p>
   <div class="actions">
     <%= f.submit %>
   </div>

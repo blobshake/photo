@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+.user_messages{
+	color:green;
+	background:yellow;
+	border: solid 1 px gray;
+	margin: 7px 0px 7px 0px;
+	padding: 5px;
+
+}
