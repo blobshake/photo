@@ -25,7 +25,6 @@ group :assets do
   gem 'carrierwave'
   gem 'rmagick'
   gem 'twitter-bootstrap-rails'
-  gem 'therubyracer'
   gem 'less-rails'
   
 
