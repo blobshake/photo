@@ -150,6 +150,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   carrierwave
   coffee-rails (~> 3.2.1)
+  execjs
   heroku-rails
   jquery-rails
   less
