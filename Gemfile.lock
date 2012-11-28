@@ -160,7 +160,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer
-  therubyracer-heroku
+  therubyracer-heroku (= 0.8.1.pre3)
   thin
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
