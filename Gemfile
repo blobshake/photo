@@ -26,6 +26,7 @@ group :assets do
   gem 'rmagick'
   gem 'twitter-bootstrap-rails'
   gem 'less-rails'
+  gem 'less'
   
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

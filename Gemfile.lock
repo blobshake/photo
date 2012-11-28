@@ -149,6 +149,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   heroku-rails
   jquery-rails
+  less
   less-rails
   pg
   rails (= 3.2.8)
