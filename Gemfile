@@ -7,13 +7,15 @@ gem 'rails', '3.2.8'
 
 group :production do
   gem 'pg'
+  gem 'therubyracer-heroku'
+  gem 'thin'
 end
 
 group :development, :test do
   gem 'sqlite3'
 end
 
-
+gem 'heroku-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
