@@ -7,7 +7,7 @@ gem 'rails', '3.2.8'
 
 group :production do
   gem 'pg'
- #gem 'therubyracer-heroku'
+  gem 'therubyracer-heroku'
   gem 'thin'
 end
 
@@ -25,7 +25,7 @@ group :assets do
   gem 'carrierwave'
   gem 'rmagick'
   gem 'twitter-bootstrap-rails'
-  #gem 'less-rails'
+  gem 'less-rails'
   
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
