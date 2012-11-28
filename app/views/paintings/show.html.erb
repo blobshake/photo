@@ -7,9 +7,9 @@
 
 
   <b>User: <%= @painting.user_id %></b>
- <p> <%= image_tag @painting.image_url(:thumb) if @painting.image? %> </p>
+ <p> <%= image_tag @painting.image_url(:thumblarge) if @painting.image? %> </p>
 
 
 <%= link_to 'Edit', edit_painting_path(@painting) %> |
 <%= link_to 'Back', paintings_path %> |
-<%= link_to 'Download', "#" %>
+<%= link_to 'Download', :send_file => @painting.image_url %>

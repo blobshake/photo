@@ -28,7 +28,17 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
-  # Process files as they are uploaded:
+    #Process files as they are uploaded:
+    process :resize_to_fill => [850, 500]
+    process :convert => 'png'
+    process :watermark
+    
+    def watermark
+        manipulate! do |img|
+            logo = Magick::Image.read("#{Rails.root}/app/assets/images/watermark.png").first
+            img = img.composite(logo, Magick::CenterGravity, Magick::OverCompositeOp)
+        end
+    end
   # process :scale => [200, 300]
   #
   # def scale(width, height)
@@ -39,12 +49,17 @@ class ImageUploader < CarrierWave::Uploader::Base
    version :thumb do
      process :resize_to_limit => [300, 200]
    end
+   
+   version :thumblarge do
+    process :resize_to_limit => [700, 475]
+   end
+
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
-  # def extension_white_list
-  #   %w(jpg jpeg gif png)
-  # end
+  def extension_white_list
+     %w(jpg jpeg gif png)
+   end
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
