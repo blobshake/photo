@@ -66,6 +66,8 @@ class PaintingsController < ApplicationController
 
     respond_to do |format|
       if @painting.save
+          PhotoMailer.photo_email.deliver
+          
         format.html { redirect_to @painting, notice: 'Painting was successfully created.' }
         format.json { render json: @painting, status: :created, location: @painting }
       else
