@@ -1,3 +1,13 @@
+<div class="sort_links">
+	<%= link_to "Most popular |", paintings_path(@byname) %>
+	<%= link_to "Newest |", paintings_path %>
+	<%= link_to "Staff favorites |", paintings_path %>
+	</div>
+	
+	<div class="general_output">
+	There are <%= Painting.count %> total photos found in the database.
+</div>
+
 <%= form_tag paintings_path, :method => 'get', :id => "paintings_search" do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
@@ -11,7 +21,7 @@
 <%= link_to painting_path(painting) do %>	
 <div class="span3" style="margin-bottom:5px;margin-right:1px;">
 
-<%= image_tag painting.image_url(:thumb) if painting.image? %>
+<%= image_tag painting.image_url(:thumb) if painting.image?  %>
 
 	</div>
 <%end%>

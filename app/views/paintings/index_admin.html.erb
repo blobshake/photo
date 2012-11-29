@@ -1,12 +1,12 @@
 <h1>Listing paintings</h1>
 
-<table>
+<table class="table table-striped"">
   <tr>
     <th>Name</th>
-    <th>User</th>
     <th>User ID</th>
-    <th></th>
-    <th></th>
+    <th>Show</th>
+    <th>Edit</th>
+	<th>Destroy</th>
   </tr>
 
 <% @paintings.each do |painting| %>
@@ -28,5 +28,6 @@
 
 
 <br />
-
+<div class="btn">
 <%= link_to 'New Painting', new_painting_path %>
+</div>

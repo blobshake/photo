@@ -12,6 +12,10 @@ class PaintingsController < ApplicationController
     @paintings = Painting.search(params[:search])
         end
     
+    def byname
+        @paintings = Painting.all(:order => painting.name)
+    end
+    
     def index_admin
         @paintings = Painting.all
         
