@@ -105,6 +105,11 @@ class PaintingsController < ApplicationController
     end
   end
     
+    def download
+        painting = Painting.find(params[:id])
+        send_file(painting.image.path, :filename => "#{painting.name}.jpg", :type => "image/jpeg")
+    end
+    
     private
     
     def authorized_user

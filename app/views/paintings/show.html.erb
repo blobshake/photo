@@ -12,5 +12,5 @@
 
 <%= link_to 'Edit', edit_painting_path(@painting) %> |
 <%= link_to 'Back', paintings_path %> |
-<%= link_to 'Download', :send_file => @painting.id %>
+<%= link_to 'Download', "/paintings/#{@painting.id}/download" %>
 <%= link_to 'Download', :send_file => Painting %>
