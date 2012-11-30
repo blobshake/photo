@@ -8,9 +8,9 @@ gem 'rails', '3.2.8'
 
 group :production do
   gem 'pg'
-  gem 'therubyracer-heroku', '0.8.1.pre3'
+  #gem 'therubyracer-heroku', '0.8.1.pre3'
   gem 'thin'
-  gem 'therubyracer', :platforms => :ruby
+  #gem 'therubyracer', :platforms => :ruby
 end
 
 group :development, :test do
@@ -21,6 +21,8 @@ gem 'heroku-rails'
 gem 'sass-rails',   '~> 3.2.3'
 gem  'execjs'
 gem 'carrierwave'
+gem 'v8'
+gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,7 +36,7 @@ group :assets do
 
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby, :require => 'v8'
+  #gem 'therubyracer', :platforms => :ruby, :require => 'v8'
 
   gem 'uglifier', '>= 1.0.3'
 end
