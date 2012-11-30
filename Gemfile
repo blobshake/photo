@@ -20,13 +20,13 @@ end
 gem 'heroku-rails'
 gem 'sass-rails',   '~> 3.2.3'
 gem  'execjs'
+gem 'carrierwave'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'carrierwave'
   gem 'rmagick'
   gem 'twitter-bootstrap-rails'
   gem 'less-rails'
