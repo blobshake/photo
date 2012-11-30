@@ -21,7 +21,7 @@ gem 'heroku-rails'
 gem 'sass-rails',   '~> 3.2.3'
 gem  'execjs'
 gem 'carrierwave'
-gem 'v8'
+gem 'libv8'
 gem 'therubyracer'
 
 # Gems used only for assets and not required
