@@ -5,6 +5,7 @@ Photo::Application.routes.draw do
     get 'logout', to: 'sessions#destroy', as: 'logout'
     get 'paintings/index_admin', to: 'paintings#index_admin'
     match 'paintings/:id/download' => 'paintings#download'
+    match 'paintings/newest' => 'paintings#newest'
     
     resources :users
     resources :sessions

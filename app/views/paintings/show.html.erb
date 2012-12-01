@@ -4,6 +4,8 @@
   <b>Name:</b>
   <%= @painting.name %>
 </p>
+<p> <b> Downloads </b> 
+<%= @painting.downloads %></p>
 
 
   <b>User: <%= @painting.user_id %></b>
@@ -13,4 +15,3 @@
 <%= link_to 'Edit', edit_painting_path(@painting) %> |
 <%= link_to 'Back', paintings_path %> |
 <%= link_to 'Download', "/paintings/#{@painting.id}/download" %>
-<%= link_to 'Download', :send_file => Painting %>

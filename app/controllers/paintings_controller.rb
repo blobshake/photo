@@ -12,12 +12,12 @@ class PaintingsController < ApplicationController
     @paintings = Painting.search(params[:search])
         end
     
-    def byname
-        @paintings = Painting.all(:order => painting.name)
+    def newest
+        @paintings = Painting.order("created_at DESC")
     end
     
     def index_admin
-        @paintings = Painting.all
+        @paintings = Painting.order("downloads DESC")
         
         respond_to do |format|
             format.html # index_admin.html.erb
@@ -107,6 +107,8 @@ class PaintingsController < ApplicationController
     
     def download
         painting = Painting.find(params[:id])
+        painting.increment(:downloads)
+        painting.save
         send_file(painting.image.path, :filename => "#{painting.name}.jpg", :type => "image/jpeg")
     end
     

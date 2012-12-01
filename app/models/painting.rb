@@ -16,7 +16,7 @@ class Painting < ActiveRecord::Base
     if search
     find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
     else
-    find(:all, :limit => 20, :order => "created_at DESC")
+    find(:all, :limit => 20, :order => "downloads DESC")
 end
 end
     
