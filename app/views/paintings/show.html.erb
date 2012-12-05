@@ -12,6 +12,7 @@
  <p> <%= image_tag @painting.image_url(:thumblarge) if @painting.image? %> </p>
 
 
-<%= link_to 'Edit', edit_painting_path(@painting) %> |
-<%= link_to 'Back', paintings_path %> |
-<%= link_to 'Download', "/paintings/#{@painting.id}/download" %>
+<p><%= link_to 'Edit', edit_painting_path(@painting) %> |
+<%= link_to 'Back', paintings_path %></p>
+
+<%= link_to 'Download', "/paintings/#{@painting.id}/download", class:'btn btn-large btn-success',type:'button' %>

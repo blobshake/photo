@@ -1,4 +1,6 @@
-<h1>Listing paintings</h1>
+<div class="page-header">
+       <h1>Listing paintings</h1>
+      </div>
 
 <table class="table table-striped"">
   <tr>
@@ -15,12 +17,12 @@
     <td><%= painting.name %></td>
     <td><%= painting.user_id %></td>
   <td><%= painting.downloads %></td>
-    <td><%= link_to 'Show', painting %></td>
+    <td><%= link_to 'Show', painting, class: 'btn btn-mini', type: 'button' %></td>
     
     
 <%# if current_user.id = painting.user %>
-	<td><%= link_to 'Edit', edit_painting_path(painting) %></td>
-	<td><%= link_to 'Destroy', painting, method: :delete  %></td>
+	<td><%= link_to 'Edit', edit_painting_path(painting), class: 'btn btn-mini btn-warning', type: 'button'  %></td>
+	<td><%= link_to 'Destroy', painting, method: :delete , class: 'btn btn-mini btn-danger', type: 'button' %></td>
     <%#end%>
 	
   </tr>
@@ -30,6 +32,6 @@
 
 
 <br />
-<div class="btn">
-<%= link_to 'New Painting', new_painting_path %>
+<div>
+<%= link_to 'New Painting', new_painting_path, class: 'btn btn-info' %>
 </div>

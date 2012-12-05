@@ -11,6 +11,10 @@
  *= require_self
  *= require_tree .
  */
+body {
+	margin-top: 80px !important;
+}
+
 .user_messages{
 	color:green;
 	background:yellow;
@@ -22,4 +26,12 @@
 .sort_links{
 	margin: 5px 0px 5px 0px;
 	padding: 5px;
+}
+
+.navbar .nav {
+     float: right !important;
+}
+
+.signout {
+	font-size: 11px;
 }

@@ -1,6 +1,11 @@
 <div class="sort_links">
-	<b> Most popular | </b>
-	<%= link_to "Newest |", "paintings/newest" %>
+
+		<div class="page-header">
+       <h1>Search for some photos</h1>
+      </div>
+	
+
+	<b> Most popular | </b><%= link_to "Newest", "paintings/newest" %>
 	</div>
 	
 	<div class="general_output">
@@ -10,7 +15,7 @@
 <%= form_tag paintings_path, :method => 'get', :id => "paintings_search" do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search",class: 'btn btn-info', :name => nil %>
   </p>
  
 <% end %>
@@ -18,10 +23,11 @@
 <% @paintings.each do |painting| %>
 
 <%= link_to painting_path(painting) do %>	
-<div class="span3" style="margin-bottom:5px;margin-right:1px;">
+<div class="span4">
+	<div class="img-polaroid">
 
-<%= image_tag painting.image_url(:thumb) if painting.image?  %>
-
+<%= image_tag painting.image_url(:thumb) if painting.image? %>
+</div>
 	</div>
 <%end%>
     
