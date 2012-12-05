@@ -1,29 +1,36 @@
-<div class="sort_links">
-	<div class="page-header">
-	<h1>Search for some photos</h1>
+
+<div class="page-header">
+	<h1>Browse Photos</h1>
+
+    <div class="btn-group" id="radioright" data-toggle="buttons-radio">
+      <button type="button" class="btn"><%= link_to "Most popular", paintings_path %></button>
+      <button type="button" class="btn active">Newest</button>
+    </div>
+
 </div>
-   <%= link_to "Most popular", "paintings" %> | <b>Newest</b>
-	</div>
-	
-	<div class="general_output">
-	There are <%= Painting.count %> total photos found in the database.
+
+<!--	
+<div class="general_output">
+There are <%= Painting.count %> total photos found in the database.
 </div>
 
 <%= form_tag paintings_path, :method => 'get', :id => "paintings_search" do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search",class: 'btn btn-info', :name => nil %>
   </p>
  
 <% end %>
+-->
 
 <% @paintings.each do |painting| %>
 
 <%= link_to painting_path(painting) do %>	
-<div class="span3" style="margin-bottom:5px;margin-right:1px;">
+<div class="span4">
+	<div class="img-polaroid">
 
 <%= image_tag painting.image_url(:thumb) if painting.image?  %>
-
+</div>
 	</div>
 <%end%>
     
