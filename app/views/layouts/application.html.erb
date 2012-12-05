@@ -23,8 +23,26 @@
 	          	<li><%= link_to "Buy Photos", 'paintings/index_admin' %></li>
 	            <li><%= link_to "Sell Photos", new_painting_path, %></li>
 	            <li><form class="navbar-search pull-left"><input type="text" class="search-query" placeholder="Find Photos"></form></li>
-	            <li><%= link_to "My Account", 'sessions#destroy', class: 'signout' %></li>
+
 	          </ul>
+
+
+	          <ul class="nav pull-right">
+                    <li id="fat-menu" class="dropdown open">
+                      <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">My account<b class="caret"></b></a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                        <li><a tabindex="-1" href="#">My photos</a></li>
+                        <li><a tabindex="-1" href="#">Photos I've bought</a></li>
+                        <li><a tabindex="-1" href="#">Photos I've sold</a></li>
+                        <li><a tabindex="-1" href="#">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><%= link_to "Sign out", 'sessions#destroy', tabindex: '-1' %></li>
+                      </ul>
+                    </li>
+                  </ul>
+
+
+
 	        </div>
 	      </div>
 	    </div>

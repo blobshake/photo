@@ -28,10 +28,7 @@ body {
 	padding: 5px;
 }
 
-.navbar .nav {
-     float: right !important;
-}
 
-.signout {
+.myaccount {
 	font-size: 11px;
 }
