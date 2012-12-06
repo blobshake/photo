@@ -6,6 +6,8 @@ class PaintingsController < ApplicationController
     
     
     
+    
+    
  
     
     def index
