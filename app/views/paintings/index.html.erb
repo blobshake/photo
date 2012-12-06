@@ -26,15 +26,17 @@
 <% end %>
 -->
 
+
 <% @paintings.each do |painting| %>
 
 <%= link_to painting_path(painting) do %>	
-<div class="span4">
+<div class="span3">
 	<div class="img-polaroid">
 
 <%= image_tag painting.image_url(:thumb) if painting.image? %>
+
+   </div>
 </div>
-	</div>
 <%end%>
     
 <% end %>

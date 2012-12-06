@@ -8,12 +8,19 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
- */
+*= require_self
+*= require_tree .
+*/
+
 body {
 	margin-top: 80px !important;
+	font-family: ‘Open Sans’, Arial, sans-serif !important;
 }
+
+h1 { font-family: ‘Open Sans’, Arial, sans-serif !important; font-weight: 300 !important; font-size: 38px !important; }
+h2 { font-family: ‘Open Sans’, Arial, sans-serif !important; font-weight: 400 !important; font-size: 28px !important; }
+h3 { font-family: ‘Open Sans’, Arial, sans-serif !important; font-weight: 400 !important; font-size: 24px !important; }
+h4 { font-family: ‘Open Sans’, Arial, sans-serif !important; font-weight: 600 !important; font-size: 18px !important; text-transform:uppercase !important;}
 
 .user_messages{
 	color:green;
@@ -32,3 +39,9 @@ body {
 .myaccount {
 	font-size: 11px;
 }
+
+#accountdrop{
+    font-size: 11px;
+    color: #999;
+}
+
