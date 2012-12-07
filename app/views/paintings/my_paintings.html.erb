@@ -1,0 +1,38 @@
+<div class="page-header">
+       <h1>My paintings</h1>
+      </div>
+
+<table class="table table-striped"">
+  <tr>
+    <th>Name</th>
+    <th>User ID</th>
+    <th>Number of downloads</>
+    <th>Show</th>
+    <th>Edit</th>
+	<th>Destroy</th>
+  </tr>
+
+
+<% @paintings.each do |painting| %>
+  <tr>
+    <td><%= painting.name %></td>
+    <td><%= painting.user_id %></td>
+  <td><%= painting.downloads %></td>
+    <td><%= link_to 'Show', painting, class: 'btn btn-mini', type: 'button' %></td>
+    
+    
+
+	<td><%= link_to 'Edit', edit_painting_path(painting), class: 'btn btn-mini btn-warning', type: 'button'  %></td>
+	<td><%= link_to 'Destroy', painting, method: :delete , class: 'btn btn-mini btn-danger', type: 'button' %></td>
+    
+	
+  </tr>
+<%end%>
+
+</table>
+
+
+<br />
+<div>
+<%= link_to 'New Painting', new_painting_path, class: 'btn btn-info' %>
+</div>

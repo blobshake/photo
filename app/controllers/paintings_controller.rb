@@ -4,12 +4,6 @@ class PaintingsController < ApplicationController
     
     before_filter :authorize, only: [:index, :new, :save]
     
-    
-    
-    
-    
- 
-    
     def index
     @paintings = Painting.search(params[:search])
         end
@@ -23,6 +17,15 @@ class PaintingsController < ApplicationController
         
         respond_to do |format|
             format.html # index_admin.html.erb
+            format.json { render json: @paintings }
+        end
+    end
+    
+    def my_paintings
+        @paintings = Painting.where(:user_id => current_user.id)
+        
+        respond_to do |format|
+            format.html # mypaintings.html.erb
             format.json { render json: @paintings }
         end
     end

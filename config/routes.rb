@@ -6,6 +6,7 @@ Photo::Application.routes.draw do
     get 'paintings/index_admin', to: 'paintings#index_admin'
     match 'paintings/:id/download' => 'paintings#download'
     match 'paintings/newest' => 'paintings#newest'
+    match 'paintings/mypaintings' => 'paintings#my_paintings'
     
     resources :users
     resources :sessions
