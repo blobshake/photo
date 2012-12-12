@@ -23,6 +23,14 @@ class UsersController < ApplicationController
       format.json { render json: @user }
     end
   end
+    
+    #Get current user
+    #Show name, number of paintings, profile pic
+    
+    def profile
+        
+    end
+    
 
   # GET /users/new
   # GET /users/new.json

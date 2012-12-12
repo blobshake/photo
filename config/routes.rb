@@ -7,6 +7,7 @@ Photo::Application.routes.draw do
     match 'paintings/:id/download' => 'paintings#download'
     match 'paintings/newest' => 'paintings#newest'
     match 'paintings/mypaintings' => 'paintings#my_paintings'
+    match 'users/profile' => 'users#profile'
     
     resources :users
     resources :sessions
