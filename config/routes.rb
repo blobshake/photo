@@ -8,6 +8,9 @@ Photo::Application.routes.draw do
     match 'paintings/newest' => 'paintings#newest'
     match 'paintings/mypaintings' => 'paintings#my_paintings'
     match 'users/profile' => 'users#profile'
+    match 'users/bought' => 'users#bought'
+    match 'users/sold' => 'users#sold'
+    match 'users/settings' => 'users#settings'
     
     resources :users
     resources :sessions

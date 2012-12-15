@@ -1,3 +1,16 @@
-<h1> User profile page </h1>
-<%=current_user[:email]%>
-<%=current_user[:id]%>
+<h3> Welcome to your profile.  You're signed in as <%=current_user[:email]%> </h3>
+
+<h4> Your Profile Photo </h4>
+<div style="height:100px;width:100px;border:solid 1px black;">
+	
+	<%= image_tag @user.photo_url(:thumb) if @user.photo? %>
+</div>
+
+<%= form_for @user, :html => {:multipart => true} do |f| %>
+ 
+  
+  <p>
+    <%= f.file_field :photo %>
+  </p>
+ <p><%= f.submit %></p>
+<% end %>
