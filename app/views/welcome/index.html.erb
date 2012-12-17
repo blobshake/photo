@@ -1,12 +1,212 @@
-<h1> Welcome to some Boobies (.)(.) </h1>
+
+
+
+<div class="logo">
+              <img src="/assets/logo3.png" alt="" height="221" width="600">
+              </div> 
+
+
+
+
+    <div id="myCarousel" class="carousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <!--<img src="/assets/slide-01.jpg" alt="">-->
+          <div class="container">
+            <div class="carousel-caption"> 
+
+              
+
+              <h1>Not your typical stock photo site</h1>
+
+				        <!-- Button to trigger modal -->
+                <a href="#myModal2" role="button" id="bigolbttn" class="btn btn-large btn-info" data-toggle="modal">Get Started &raquo;</a>
+
+                <p class="logintext"><a href="#myModal" data-toggle="modal">Already a member? Log In</a></p>
+            </div>
+          </div>
+        </div>
+         </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Heading</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+
+
+
+
+
+
+
+
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="/assets/browser-icon-chrome.png">
+        <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="/assets/browser-icon-firefox.png">
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="/assets/browser-icon-safari.png">
+        <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+
+
+
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2012 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+
+
+
 
 <%= form_tag sessions_path do %>
-  <div class="field">
-    <%= text_field_tag :email, params[:email], placeholder: 'email' %>
-  </div>
-  <div class="field">
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Log In" , class: 'btn btn-info'%> or <%= link_to "Sign Up", new_user_path%> </div> 
-<% end %>
-</div>
+     
+              <h3 id="myModalLabel">Log in</h3>
+         </div>
+         <div class="modal-body">
+    
+        <div class="field">
+           <%= text_field_tag :email, params[:email], placeholder: 'Email address' %>
+         </div>
+            <div class="field">
+             <%= password_field_tag :password, placeholder: 'Password' %>
+            </div>
+ 
+         </div>
+         <div class="modal-footer">
+           <%= submit_tag "Log In" , class: 'btn btn-large btn-info pull-left'%>
+      
+        <% end %>
+
+
+
+
+
+
+
+ <!-- Random background -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"</script>
+<script src="/assets/bootstrap.js"></script>
+
+ 
+         <script type="text/javascript">
+               var images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg', 'img7.jpg'];
+               $('<img src="/assets/' + images[Math.floor(Math.random() * images.length)] + '" style="" />').appendTo('.item');
+</script>
+ 
+  
+<!-- Log In Modal -->
+    <%= form_tag sessions_path do %>
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h3 id="myModalLabel">Log in</h3>
+         </div>
+         <div class="modal-body">
+    
+        <div class="field">
+           <%= text_field_tag :email, params[:email], placeholder: 'Email address' %>
+         </div>
+            <div class="field">
+             <%= password_field_tag :password, placeholder: 'Password' %>
+            </div>
+ 
+         </div>
+         <div class="modal-footer">
+           <%= submit_tag "Log In" , class: 'btn btn-large btn-info pull-left'%>
+         </div>
+        </div>
+        <% end %>
+
+
+<!-- Sign Up Modal -->
+
+        <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h3 id="myModalLabel">Log in</h3>
+         </div>
+         <div class="modal-body">
+        <input type="text" class="input-block-level" placeholder="First name">
+        <input type="text" class="input-block-level" placeholder="Last name">
+        <input type="text" class="input-block-level" placeholder="Email address">
+        <input type="password" class="input-block-level" placeholder="Password">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+ 
+         </div>
+         <div class="modal-footer">
+           <button class="btn btn-large btn-primary" type="submit">Sign Up</button>
+         </div>
+        </div>
+ 
+

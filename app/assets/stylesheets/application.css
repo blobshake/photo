@@ -9,18 +9,32 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
 *= require_self
+*= require twitter/bootstrap
 *= require_tree .
 */
 
 body {
-	margin-top: 80px !important;
-	font-family: ‘Open Sans’, Arial, sans-serif !important;
+	margin-top: 66px !important;
+	background: #F9F9F9;
+	background-image: url(/assets/bgrd3.png);
 }
 
-h1 { font-family: ‘Open Sans’, Arial, sans-serif !important; font-weight: 300 !important; font-size: 38px !important; }
-h2 { font-family: ‘Open Sans’, Arial, sans-serif !important; font-weight: 400 !important; font-size: 28px !important; }
-h3 { font-family: ‘Open Sans’, Arial, sans-serif !important; font-weight: 400 !important; font-size: 24px !important; }
-h4 { font-family: ‘Open Sans’, Arial, sans-serif !important; font-weight: 600 !important; font-size: 18px !important; text-transform:uppercase !important;}
+.navbar .nav > li > a {
+padding: 20px 20px !important;
+}
+
+#paintings_search {
+	margin: 17px 0 10px 0;
+}
+
+
+.navbar .navbar-inner {
+border: 1 solid #FAFAFA;
+-webkit-box-shadow: none !important;
+-moz-box-shadow: none !important;
+box-shadow: none !important;
+background-color: #fff;
+Background-image: none;
 
 .user_messages{
 	color:green;
@@ -44,4 +58,3 @@ h4 { font-family: ‘Open Sans’, Arial, sans-serif !important; font-weight: 60
     font-size: 11px;
     color: #999;
 }
-

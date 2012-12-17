@@ -30,7 +30,7 @@ group :assets do
   
   gem 'coffee-rails', '~> 3.2.1'
   gem 'rmagick'
-  gem 'twitter-bootstrap-rails'
+  gem 'bootstrap-sass-rails'
   gem 'less-rails'
   gem 'less'
 
