@@ -9,19 +9,19 @@
 
 <!-- Google Webfont JS Import -->
 
-            <script type="text/javascript">
-                  WebFontConfig = {
-                  google: { families: [ 'Sanchez::latin', 'Open+Sans:600:latin' ] }
-                     };
-                 (function() {
-                     var wf = document.createElement('script');
-                      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-                      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-                      wf.type = 'text/javascript';
-                      wf.async = 'true';
-                      var s = document.getElementsByTagName('script')[0];
-                      s.parentNode.insertBefore(wf, s);
-                 })(); </script>
+      <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans:300:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
 
 
 <!-- Le styles -->
@@ -58,7 +58,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Sanchez', Courier, monospace;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 .logintext a {
@@ -140,6 +140,7 @@ h6 {
     }
     .carousel-inner {
         box-shadow: 0 -3px 20px 10px #AAA;
+        border-top: 6px solid #00A3D9;
     }
 
     .carousel .item {
@@ -163,7 +164,7 @@ h6 {
     }
     .carousel-caption h1,
     .carousel-caption .lead {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
       font-weight: normal;
       margin: 0;
       line-height: 2.25;

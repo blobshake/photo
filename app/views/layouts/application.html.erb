@@ -7,9 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-<script type="text/javascript">
+      <script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Sanchez::latin' ] }
+    google: { families: [ 'Open+Sans:300:latin' ] }
   };
   (function() {
     var wf = document.createElement('script');
@@ -20,8 +20,6 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })(); </script>
-
-    
         <!-- Le styles -->
 
 
@@ -76,8 +74,8 @@
                       <a href="#" id="accountdrop" role="button" class="dropdown-toggle" data-toggle="dropdown"> <%=current_user[:email]%><b class="caret"></b></a>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
                         <li><%= link_to "My Paintings", '/paintings/mypaintings', tabindex:'-1'%></li>
-						<li><%= link_to "My Profile", '/users/profile', tabindex:'-1'%></li>
-						<li><%= link_to "Photos I've bought", '/users/bought', tabindex:'-1'%></li>
+				            		<li><%= link_to "My Profile", '/users/profile', tabindex:'-1'%></li>
+			            			<li><%= link_to "Photos I've bought", '/users/bought', tabindex:'-1'%></li>
                         <li><%= link_to "Photos I've sold", '/users/sold', tabindex:'-1'%></li>
                         <li><%= link_to "Settings", '/users/settings', tabindex:'-1'%></li>
 
