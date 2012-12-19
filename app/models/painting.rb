@@ -4,6 +4,7 @@ class Painting < ActiveRecord::Base
     attr_accessible :name, :image, :remote_image_url
     
     belongs_to :user
+    has_many :transactions
     
     validates :user_id, :presence => true
     validates :image, :presence => true

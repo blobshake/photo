@@ -1,1 +1,8 @@
 <h1> Photos I've sold</h1>
+
+<% @paintings.each do |painting| %>
+<p> Painting Name <%= painting.name %> </p>
+<p> <%= image_tag painting.image_url(:thumb) %> </p>
+<p> Painting Name: <%= painting.name %> </p>
+<p> Painting ID: <%= painting.id %> </p>
+<%end%>

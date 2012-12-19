@@ -12,6 +12,34 @@ class UsersController < ApplicationController
       format.json { render json: @users }
     end
   end
+    
+  def bought
+      
+     @match_id = Transaction.where(:buyer_id => current_user.id).pluck(:photo_id)
+      #@paintings = Painting.where("id = ?", @match_id)
+      @paintings = Painting.where(:id => @match_id)
+      # @paintings = Painting.where(:id => @match_id)
+      
+      respond_to do |format|
+          format.html # bought.html.erb
+          format.json { render json: @paintings}
+    end
+  end
+    
+    def sold
+        
+        @seller_match_id = Transaction.where(:seller_id => current_user.id).pluck(:photo_id)
+        #@paintings = Painting.where("id = ?", @match_id)
+        @paintings = Painting.where(:id => @seller_match_id)
+        # @paintings = Painting.where(:id => @match_id)
+        
+        respond_to do |format|
+            format.html # bought.html.erb
+            format.json { render json: @paintings}
+        end
+    end
+    
+    
 
   # GET /users/1
   # GET /users/1.json

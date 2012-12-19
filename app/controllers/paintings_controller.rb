@@ -108,7 +108,11 @@ class PaintingsController < ApplicationController
         painting = Painting.find(params[:id])
         painting.increment(:downloads)
         painting.save
+        
+        Transaction.create(:photo_id => painting.id,:seller_id => painting.user_id,:buyer_id => current_user.id,:name => painting.name, :image => painting.image)
+        
         send_file(painting.image.path, :filename => "#{painting.name}.jpg", :type => "image/jpeg")
+    
     end
     
     private
