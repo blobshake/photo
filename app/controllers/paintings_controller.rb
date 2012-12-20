@@ -5,8 +5,12 @@ class PaintingsController < ApplicationController
     before_filter :authorize, only: [:index, :new, :save]
     
     def index
+        if params[:tag]
+            @paintings = Painting.tagged_with(params[:tag])
+            else
     @paintings = Painting.search(params[:search])
         end
+    end
     
     def newest
         @paintings = Painting.order("created_at DESC")

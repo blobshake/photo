@@ -11,6 +11,7 @@ Photo::Application.routes.draw do
     match 'users/bought' => 'users#bought'
     match 'users/sold' => 'users#sold'
     match 'users/settings' => 'users#settings'
+    get 'tags/:tag', to: 'paintings#index', as: :tag
     
     resources :users
     resources :sessions

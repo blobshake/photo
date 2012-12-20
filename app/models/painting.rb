@@ -1,7 +1,8 @@
 class Painting < ActiveRecord::Base
     
     
-    attr_accessible :name, :image, :remote_image_url
+    attr_accessible :name, :image, :remote_image_url, :tag_list
+    acts_as_taggable
     
     belongs_to :user
     has_many :transactions

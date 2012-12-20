@@ -23,6 +23,7 @@ gem  'execjs'
 gem 'carrierwave'
 gem 'libv8'
 gem 'therubyracer'
+gem 'acts-as-taggable-on'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -11,6 +11,7 @@
  <p id="notice"><%= notice %></p>
 <p> <b> Downloads </b> 
 <%= @painting.downloads %></p>
+<p>Tags: <%= raw @painting.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
 
 
 <p><%= link_to 'Edit', edit_painting_path(@painting) %> |
