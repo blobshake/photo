@@ -13,6 +13,18 @@
 <%= @painting.downloads %></p>
 <p>Tags: <%= raw @painting.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
 
+<%= form_for @painting do |f| %>
+
+<div class="field">
+  <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+  <%= f.text_field :tag_list %>
+</div>
+
+ <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
 
 <p><%= link_to 'Edit', edit_painting_path(@painting) %> |
 <%= link_to 'Back', paintings_path %></p>
