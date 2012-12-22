@@ -1,7 +1,6 @@
 class PaintingsController < ApplicationController
     
-    before_filter :authorized_user, only: [:destroy, :update, :edit]
-    
+     before_filter :authorized_user, only: [:destroy, :update, :edit]
     before_filter :authorize, only: [:index, :new, :save]
     
     def index
