@@ -7,8 +7,10 @@ class PaintingsController < ApplicationController
         if params[:tag]
             @paintings = Painting.tagged_with(params[:tag])
             else
-    @paintings = Painting.search(params[:search])
+    @paintings = Painting.search(params[:search]) +
+   Painting.tagged_with(params[:search])
         end
+        
     end
     
     def newest
