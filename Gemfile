@@ -24,6 +24,7 @@ gem 'carrierwave'
 gem 'libv8'
 gem 'therubyracer'
 gem 'acts-as-taggable-on'
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
